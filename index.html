@@ -17,25 +17,22 @@
         <div class="slider-container">
 
             <!-- freccia precedente -->
-            <div class="prev">
+            <div class="prev" @click="prevPhoto">
                 <i class="fas fa-chevron-left"></i>
             </div>
 
             <!-- immagini -->
             <div class="images">
-                <img src="img/img4.jpeg" alt="paesaggio 1">
+                <img :src="photos[counter]" alt="paesaggio 1">
             </div>
 
             <!-- freccia successivo -->
-            <div class="next">
+            <div class="next" @click="nextPhoto">
                 <i class="fas fa-chevron-right"></i>
             </div>
 
             <div class="pill">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i :class="(index == counter) ? 'active' : '' " class="fas fa-circle" v-for="(item, index) in photos"></i>
             </div>
 
         </div>
