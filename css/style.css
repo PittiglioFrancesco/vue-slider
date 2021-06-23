@@ -34,6 +34,7 @@
 .prev, .next{
     align-self: center;
     margin: 0 1%;
+    cursor: pointer;
 }
 
 .prev i, .next i{
@@ -53,6 +54,7 @@
 
 .pill i{
     margin: 10px;
+    cursor: pointer;
 }
 
 .pill > i.active{

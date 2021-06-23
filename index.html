@@ -32,7 +32,7 @@
             </div>
 
             <div class="pill">
-                <i :class="(index == counter) ? 'active' : '' " class="fas fa-circle" v-for="(item, index) in photos"></i>
+                <i :class="(index == counter) ? 'active' : '' " class="fas fa-circle" v-for="(item, index) in photos" @click='cambiaPhoto(index)'></i>
             </div>
 
         </div>
